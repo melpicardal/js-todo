@@ -4,25 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS Todo App</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="index.css" />
+    <title>JS Todo App</title>
   </head>
   <body>
-    <div class="todo-wrapper">
+    <header>
       <h1>Todo List</h1>
-      <div class="todo-input-wrapper">
-        <input
-          class="input-el"
-          type="text"
-          placeholder="What would you like to do?"
-        />
-        <button class="btn-el">Add</button>
+    </header>
+    <form>
+      <input
+        class="todo-input"
+        type="text"
+        placeholder="What would you like to do?"
+      />
+      <button class="todo-btn" type="submit">
+        <i class="fas fa-plus"></i>
+      </button>
+      <div class="select">
+        <select name="todos" class="filter-todo">
+          <option value="all">ALL</option>
+          <option value="completed">COMPLETED</option>
+          <option value="pending">PENDING</option>
+        </select>
       </div>
-      <div class="todo-list-wrapper">
-        <ul class="todo-list">
-          <li></li>
-        </ul>
-      </div>
+    </form>
+    <div class="todo-container">
+      <ul class="todo-list"></ul>
     </div>
     <script src="index.js"></script>
   </body>
